@@ -1,0 +1,131 @@
+$primary: #FFEE00;
+
+
+body, html {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    font-family: 'Montserrat';
+}
+
+.container {
+    background: $primary;
+    clip-path: polygon(100% 0, 100% 88%, 52% 100%, 55% 94%, 0 100%, 0 0);
+
+    header {
+        display: grid;
+        grid-template-columns: 20% auto;
+        padding: 20px;
+
+        #logo {
+            width: 100px;
+        }
+
+        nav {
+            justify-self: right;
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+
+                li {
+                    display: inline;
+
+                    a {
+                        padding: 8px 20px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+#hero {
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+    object-fit: scale-down;
+
+    video {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+
+    #content {
+        padding: 4em;
+
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 5em;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 0;
+            transform: rotateZ(-7deg);
+            transform-origin: 0%;
+            animation: fadeIn 1s linear 1.3s forwards;
+            opacity: 0;
+
+            @keyframes fadeIn {
+                to { opacity: 1; }
+            }
+        }
+    }
+}
+
+.btn {
+    background: #000;
+    padding: 15px 60px 15px 30px;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1.2em;
+    display: inline-block;
+    margin-bottom: 1em;
+    clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+}
+
+.fall-down.words {
+    transform: rotateZ(-7deg);
+    transform-origin: 0%;
+
+    .char {
+        animation: slide-down 2s forwards cubic-bezier(0,1.18,.82,1.02);
+        animation-delay: calc(.5s + (.1s * var(--char-index)));
+        opacity: 0;
+
+        @keyframes slide-down {
+            from {
+                transform: translateY(125%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0%);
+                opacity: 1;
+                font-size: .5em;
+                background: black;
+                color: yellow;
+                padding: 5px;
+                display: block;
+            }
+        }
+
+    
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <a href="#"><img src="images/logo.svg" id="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Who</a></li>
+                    <li><a href="#">What</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="hero">
+            <video autoplay muted loop id="video">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+
+            <div id="content">
+                <h1 class="fall-down" data-splitting>Level up</h1>
+                <p>Access backing tracks, tabs &amp; more for free</p>
+
+                <a href="#" class="btn">Let's Jam</a>
+            </div>
+        </div>
+    </div>
+    <script> Splitting(); </script>
+</body>
+</html>
